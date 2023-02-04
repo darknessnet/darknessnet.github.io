@@ -6,6 +6,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
 </head>
 <body>
+  <template id="greetings">
+    My First JavaScript Terminal!
+    _______  _______  ______    __   __  ___   __    _  _______  ___     
+   |       ||       ||    _ |  |  |_|  ||   | |  |  | ||   _   ||   |    
+   |_     _||    ___||   | ||  |       ||   | |   |_| ||  |_|  ||   |    
+     |   |  |   |___ |   |_||_ |       ||   | |       ||       ||   |    
+     |   |  |    ___||    __  ||       ||   | |  _    ||       ||   |___ 
+     |   |  |   |___ |   |  | || ||_|| ||   | | | |   ||   _   ||       |
+     |___|  |_______||___|  |_||_|   |_||___| |_|  |__||__| |__||_______|
+
+    Enter your Name as a command!
+   </template>
 </body>
 </html>
 
@@ -16,6 +28,6 @@
                       '. Wellcome to this terminal.');
         }
     }, {
-        greetings: 'My First Web Terminal'
+        greetings: greetings.innerHTML
     });
     </script>
