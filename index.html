@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Open AI Terminal</title>
+  <link rel="icon" type="image/x-icon" href="/images/terminal.ico">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
 </head>
 <body>
+
   <template id="greetings">
-    My First JavaScript Terminal!
+
+    My Open AI In JavaScript Terminal
     _______  _______  ______    __   __  ___   __    _  _______  ___     
    |       ||       ||    _ |  |  |_|  ||   | |  |  | ||   _   ||   |    
    |_     _||    ___||   | ||  |       ||   | |   |_| ||  |_|  ||   |    
@@ -16,18 +20,42 @@
      |   |  |   |___ |   |  | || ||_|| ||   | | | |   ||   _   ||       |
      |___|  |_______||___|  |_||_|   |_||___| |_|  |__||__| |__||_______|
 
-    Enter your Name as a command!
+    Enter Your Questions Here And Answer
+
    </template>
+
 </body>
 </html>
-
 <script>
-    $('body').terminal({
-        hello: function(what) {
-            this.echo('Hello, ' + what +
-                      '. Wellcome to this terminal.');
-        }
-    }, {
-        greetings: greetings.innerHTML
-    });
-    </script>
+
+    $('body').terminal( function(what) {
+
+      if (typeof what !== 'undefined') {
+        
+        var settings = {
+          "url": "https://api.openai.com/v1/completions",
+          "method": "POST",
+          "async": false,
+          "timeout": 0,
+          "headers": {
+            "Authorization": "Bearer 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",
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({
+            "model": "text-davinci-003",
+            "prompt": what,
+            "temperature": 0,
+            "max_tokens": 2046
+          }),
+        };
+
+        var jqXHR = $.ajax(settings).done(function (response) {});
+        this.echo(JSON.parse(jqXHR.responseText).choices[0].text);
+
+    }
+
+  }, {
+      greetings: greetings.innerHTML
+  });
+
+</script>
