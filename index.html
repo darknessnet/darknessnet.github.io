@@ -137,7 +137,7 @@
     }
 
     .quantity-controls button {
-      background-color: #aebbd3;
+      background-color: #070707;
       color: white;
       border: none;
       padding: 0.3rem 0.6rem;
@@ -148,7 +148,7 @@
     }
 
     .buy-btn {
-      background-color: #000000;
+      background-color: #28a745;
       color: #fff;
       padding: 0.6rem 1.2rem;
       border: none;
@@ -224,6 +224,13 @@
         .join('%0A');
       document.querySelector('.whatsapp-float').href = base + encodeURIComponent(message);
     }
+
+    function sendToWhatsApp(product) {
+      const qty = document.getElementById('qty-' + product).innerText;
+      const message = `I want to order ${qty} Kg of ${product}`;
+      const url = `https://wa.me/917378367311?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -260,7 +267,7 @@
         <span id="qty-Special Elachi Peanut Crush Chikki">0</span>
         <button onclick="updateQuantity('Special Elachi Peanut Crush Chikki', 1)">+</button>
       </div>
-      <button class="buy-btn">Buy Now</button>
+      <button class="buy-btn" onclick="sendToWhatsApp('Special Elachi Peanut Crush Chikki')">₹180/Kg</button>
     </div>
 
       <div class="product">
@@ -272,7 +279,7 @@
           <span id="qty-Chocolate Malai Chikki">0</span>
           <button onclick="updateQuantity('Chocolate Malai Chikki', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Chocolate Malai Chikki')">₹180/Kg</button>
       </div>
 
       <div class="product">
@@ -284,7 +291,7 @@
           <span id="qty-Malai Chikki">0</span>
           <button onclick="updateQuantity('Malai Chikki', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Malai Chikki')">₹180/Kg</button>
       </div>
   
       <div class="product">
@@ -296,7 +303,7 @@
           <span id="qty-Mix Dry Fruit Chikki">0</span>
           <button onclick="updateQuantity('Mix Dry Fruit Chikki', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Mix Dry Fruit Chikki')">₹180/Kg</button>
       </div>
   
       <div class="product">
@@ -308,7 +315,7 @@
           <span id="qty-Peanut Chikki">0</span>
           <button onclick="updateQuantity('Peanut Chikki', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Peanut Chikki')">₹180/Kg</button>
       </div>
 
       <div class="product">
@@ -320,7 +327,7 @@
           <span id="qty-Almond & Cashew Chikki">0</span>
           <button onclick="updateQuantity('Almond & Cashew Chikki', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Almond & Cashew Chikki')">₹180/Kg</button>
       </div>
 
       <div class="product">
@@ -332,7 +339,7 @@
           <span id="qty-Cashew Chikki">0</span>
           <button onclick="updateQuantity('Cashew Chikki', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Cashew Chikki')">₹180/Kg</button>
       </div>
 
       <div class="product">
@@ -344,7 +351,7 @@
           <span id="qty-Jelly Pack">0</span>
           <button onclick="updateQuantity('Jelly Pack', 1)">+</button>
         </div>
-        <button class="buy-btn">Buy Now</button>
+        <button class="buy-btn" onclick="sendToWhatsApp('Jelly Pack')">₹180/Kg</button>
       </div>
       
       </section>
@@ -360,7 +367,7 @@
     <p>Email: contact@sahyadrichikki.in | Phone: +91 98765 43210</p>
   </section>
 
-  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/917378367311" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
