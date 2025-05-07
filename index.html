@@ -217,7 +217,7 @@
     }
 
     function updateWhatsAppLink() {
-      const base = 'https://wa.me/919876543210?text=';
+      const base = 'https://wa.me/917378367311?text=';
       const message = Object.entries(cart)
         .filter(([_, qty]) => qty > 0)
         .map(([item, qty]) => `${item}: ${qty}`)
@@ -252,65 +252,102 @@
 
   <section class="products" id="products">
     <div class="product">
-      <img src="/images/chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Peanut Chikki">
-      <h3>Peanut Chikki</h3>
-      <p>Classic roasted peanuts with golden jaggery.</p>
+      <img src="/images/Elachi Peanut Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Elachi Peanut Chikki">
+      <h3>Special Elachi Peanut Crush Chikki</h3>
+      <p>Classic roasted peanuts crush with golden jaggery.</p>
       <div class="quantity-controls">
-        <button onclick="updateQuantity('Peanut Chikki', -1)">-</button>
-        <span id="qty-Peanut Chikki">0</span>
-        <button onclick="updateQuantity('Peanut Chikki', 1)">+</button>
+        <button onclick="updateQuantity('Special Elachi Peanut Crush Chikki', -1)">-</button>
+        <span id="qty-Special Elachi Peanut Crush Chikki">0</span>
+        <button onclick="updateQuantity('Special Elachi Peanut Crush Chikki', 1)">+</button>
       </div>
       <button class="buy-btn">Buy Now</button>
     </div>
-    <!-- Additional products can be copied and renamed as needed -->
-    <div class="product">
-        <img src="/images/chikki-nuts.jpg?auto=format&fit=crop&w=600&q=80" alt="Chocolate Chikki">
-        <h3>Chocolate Chikki</h3>
+
+      <div class="product">
+        <img src="/images/Chocolate Malai Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Chocolate Chikki">
+        <h3>Chocolate Malai Chikki</h3>
         <p>A modern twist for chocolate lovers.</p>
         <div class="quantity-controls">
-          <button onclick="updateQuantity('Chocolate Chikki', -1)">-</button>
-          <span id="qty-Chocolate Chikki">0</span>
-          <button onclick="updateQuantity('Chocolate Chikki', 1)">+</button>
+          <button onclick="updateQuantity('Chocolate Malai Chikki', -1)">-</button>
+          <span id="qty-Chocolate Malai Chikki">0</span>
+          <button onclick="updateQuantity('Chocolate Malai Chikki', 1)">+</button>
+        </div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/images/Malai Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Malai Chikki">
+        <h3>Malai Chikki</h3>
+        <p>A modern twist for malai lovers.</p>
+        <div class="quantity-controls">
+          <button onclick="updateQuantity('Malai Chikki', -1)">-</button>
+          <span id="qty-Malai Chikki">0</span>
+          <button onclick="updateQuantity('Malai Chikki', 1)">+</button>
         </div>
         <button class="buy-btn">Buy Now</button>
       </div>
   
       <div class="product">
-        <img src="/images/chikki-dish.jpeg?auto=format&fit=crop&w=600&q=80" alt="Dry Fruit Chikki">
-        <h3>Dry Fruit Chikki</h3>
-        <p>A blend of almonds, cashews, and pistachios.</p>
+        <img src="/images/Mix Dry Fruit Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Mix Dry Fruit Chikki">
+        <h3>Mix Dry Fruit Chikki</h3>
+        <p>A blend of almonds, cashews, and til.</p>
         <div class="quantity-controls">
-          <button onclick="updateQuantity('Dry Fruit Chikki', -1)">-</button>
-          <span id="qty-Dry Fruit Chikki">0</span>
-          <button onclick="updateQuantity('Dry Fruit Chikki', 1)">+</button>
+          <button onclick="updateQuantity('Mix Dry Fruit Chikki', -1)">-</button>
+          <span id="qty-Mix Dry Fruit Chikki">0</span>
+          <button onclick="updateQuantity('Mix Dry Fruit Chikki', 1)">+</button>
         </div>
         <button class="buy-btn">Buy Now</button>
       </div>
   
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1630618720551-51c401e6c8aa?auto=format&fit=crop&w=600&q=80" alt="Sesame Chikki">
-        <h3>Sesame (Til) Chikki</h3>
-        <p>Nutty and healthy sesame seeds with a sweet crunch.</p>
+        <img src="/images/Peanut Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Peanut Chikki">
+        <h3>Peanut Chikki</h3>
+        <p>Classic roasted peanuts with golden jaggery.</p>
         <div class="quantity-controls">
-          <button onclick="updateQuantity('Sesame Chikki', -1)">-</button>
-          <span id="qty-Sesame Chikki">0</span>
-          <button onclick="updateQuantity('Sesame Chikki', 1)">+</button>
+          <button onclick="updateQuantity('Peanut Chikki', -1)">-</button>
+          <span id="qty-Peanut Chikki">0</span>
+          <button onclick="updateQuantity('Peanut Chikki', 1)">+</button>
         </div>
         <button class="buy-btn">Buy Now</button>
       </div>
-  
-      <!-- Add more dummy products -->
-      <div class="product"><h3>Coconut Chikki</h3><p>Grated coconut in sweet jaggery base.</p><div class="quantity-controls"><button onclick="updateQuantity('Coconut Chikki', -1)">-</button><span id="qty-Coconut Chikki">0</span><button onclick="updateQuantity('Coconut Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Cashew Chikki</h3><p>Premium cashews in rich jaggery blend.</p><div class="quantity-controls"><button onclick="updateQuantity('Cashew Chikki', -1)">-</button><span id="qty-Cashew Chikki">0</span><button onclick="updateQuantity('Cashew Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Almond Chikki</h3><p>Crunchy almonds with syrupy sweetness.</p><div class="quantity-controls"><button onclick="updateQuantity('Almond Chikki', -1)">-</button><span id="qty-Almond Chikki">0</span><button onclick="updateQuantity('Almond Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Pistachio Chikki</h3><p>Delicate pistachios in a classic chikki form.</p><div class="quantity-controls"><button onclick="updateQuantity('Pistachio Chikki', -1)">-</button><span id="qty-Pistachio Chikki">0</span><button onclick="updateQuantity('Pistachio Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Mixed Nut Chikki</h3><p>A crunchy combo of all your favorite nuts.</p><div class="quantity-controls"><button onclick="updateQuantity('Mixed Nut Chikki', -1)">-</button><span id="qty-Mixed Nut Chikki">0</span><button onclick="updateQuantity('Mixed Nut Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Til-Gud Chikki</h3><p>Sesame seeds with traditional jaggery.</p><div class="quantity-controls"><button onclick="updateQuantity('Til-Gud Chikki', -1)">-</button><span id="qty-Til-Gud Chikki">0</span><button onclick="updateQuantity('Til-Gud Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Cardamom Chikki</h3><p>Jaggery and nuts infused with cardamom.</p><div class="quantity-controls"><button onclick="updateQuantity('Cardamom Chikki', -1)">-</button><span id="qty-Cardamom Chikki">0</span><button onclick="updateQuantity('Cardamom Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Sugar-Free Chikki</h3><p>Enjoy chikki with natural sweeteners.</p><div class="quantity-controls"><button onclick="updateQuantity('Sugar-Free Chikki', -1)">-</button><span id="qty-Sugar-Free Chikki">0</span><button onclick="updateQuantity('Sugar-Free Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Puffed Rice Chikki</h3><p>Light and crispy chikki made from murmura.</p><div class="quantity-controls"><button onclick="updateQuantity('Puffed Rice Chikki', -1)">-</button><span id="qty-Puffed Rice Chikki">0</span><button onclick="updateQuantity('Puffed Rice Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-      <div class="product"><h3>Amaranth Chikki</h3><p>Power-packed chikki with rajgira grains.</p><div class="quantity-controls"><button onclick="updateQuantity('Amaranth Chikki', -1)">-</button><span id="qty-Amaranth Chikki">0</span><button onclick="updateQuantity('Amaranth Chikki', 1)">+</button></div><button class="buy-btn">Buy Now</button></div>
-    </section>
+
+      <div class="product">
+        <img src="/images/Almond & Cashew Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Almond & Cashew Chikki">
+        <h3>Almond & Cashew Chikki</h3>
+        <p>A blend of almonds, cashews.</p>
+        <div class="quantity-controls">
+          <button onclick="updateQuantity('Almond & Cashew Chikki', -1)">-</button>
+          <span id="qty-Almond & Cashew Chikki">0</span>
+          <button onclick="updateQuantity('Almond & Cashew Chikki', 1)">+</button>
+        </div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/images/Cashew Chikki.jpeg?auto=format&fit=crop&w=600&q=80" alt="Cashew Chikki">
+        <h3>Cashew Chikki</h3>
+        <p>A blend of cashews.</p>
+        <div class="quantity-controls">
+          <button onclick="updateQuantity('Cashew Chikki', -1)">-</button>
+          <span id="qty-Cashew Chikki">0</span>
+          <button onclick="updateQuantity('Cashew Chikki', 1)">+</button>
+        </div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="/images/Jelly Pack.jpeg?auto=format&fit=crop&w=600&q=80" alt="Jelly Pack">
+        <h3>Jelly Pack</h3>
+        <p>A sweet & soft jelly.</p>
+        <div class="quantity-controls">
+          <button onclick="updateQuantity('Jelly Pack', -1)">-</button>
+          <span id="qty-Jelly Pack">0</span>
+          <button onclick="updateQuantity('Jelly Pack', 1)">+</button>
+        </div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      
+      </section>
   </section>
 
   <section class="hero" id="about" style="background:#dbe9f4; color:#111;">
